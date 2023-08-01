@@ -21,9 +21,18 @@ input {
 button {
   padding: 8px 12px;
   cursor: pointer;
+
+}
+.gallery{
+  padding: 0;
+display: flex;
+gap: 10px;
+flex-direction: column;
 }
 .li_item {
-margin-bottom: 10px;
+list-style-type: none;
+
+
 }
 .img_item {
   display: block;

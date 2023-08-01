@@ -1,17 +1,15 @@
 const elements = {
-  body : document.querySelector('body'),
-  button : document.querySelector('.change-color'),
-  spanColor : document.querySelector('.color')
+  body: document.querySelector('body'),
+  button: document.querySelector('.change-color'),
+  spanColor: document.querySelector('.color')
 }
 
-elements.button.addEventListener('click', onClick)
+elements.button.addEventListener('click', onClick);
+
 function onClick(evt) {
-  let randomColor = getRandomHexColor();
-  elements.body.style.backgroundColor = randomColor;
-  elements.spanColor.textContent = randomColor;
-
+  elements.body.style.backgroundColor = getRandomHexColor();
+  elements.spanColor.textContent = getRandomHexColor();
 }
-
 
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215)

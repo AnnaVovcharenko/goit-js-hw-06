@@ -14,17 +14,14 @@ const images = [
 ];
 
 
-const LiGallery = document.querySelector('.gallery')
+const liGallery = document.querySelector('.gallery')
 function galleryImages(arr) {
-  const gallery = arr.map(({url, alt}) => `<li class="li_item">
-  <img class="img_item " src="${url}" alt="${alt}" width="300">
+  const gallery = arr.map(({ url, alt }) => `<li class="li_item">
+  <img class="img_item " src="${url}" alt="${alt}" width="360" height="300">
   </li>`).join('')
-  console.log(gallery);
-
-
-  LiGallery.insertAdjacentHTML('beforeend', gallery)
+  liGallery.insertAdjacentHTML('beforeend', gallery)
 }
 
-galleryImages(images)
+galleryImages(images);
 
 
